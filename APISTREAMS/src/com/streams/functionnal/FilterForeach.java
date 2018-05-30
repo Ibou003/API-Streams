@@ -3,8 +3,6 @@ package com.streams.functionnal;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.xml.stream.EventFilter;
-
 public class FilterForeach {
 	
 	public static void main(String Args []){
