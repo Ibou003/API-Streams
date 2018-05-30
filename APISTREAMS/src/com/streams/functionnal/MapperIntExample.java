@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MapperExample {
+public class MapperIntExample {
 	public static void main(String Args[]) {
 		System.out.println("Exemple API Streams Java 8");
 
@@ -18,12 +18,17 @@ public class MapperExample {
 		}
 
 		System.out.println("Java 8 et plus");
-		names.stream().filter(MapperExample::isNotSam).map(User::new)
+		names.stream().filter(MapperIntExample::isNotSam).map(User::new)
 				.forEach(System.out::println);
 
-		List<User> userList = names.stream().filter(MapperExample::isNotSam)
+		List<User> userList = names.stream().filter(MapperIntExample::isNotSam)
 				.map(User::new).collect(Collectors.toList());
 		System.out.println(userList);
+		
+		 int sum = userList.stream()
+				 .mapToInt(User::getAge)
+				 .sum();
+		 System.out.println("la somme est bien : " + sum);
 	}
 
 	private static boolean isNotSam(String name) {
