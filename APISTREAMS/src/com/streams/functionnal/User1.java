@@ -3,6 +3,7 @@ package com.streams.functionnal;
 import java.util.List;
 
 public class User1 {
+    // user 1
 	private String name;
     private Integer age = 30;
     private List<String> phoneNumbers;
