@@ -2,6 +2,7 @@ package com.streams.functionnal;
 
 public class User {
 	 private String name;
+	 // git master
      private Integer age = 30;
      
      
